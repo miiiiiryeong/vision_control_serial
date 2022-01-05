@@ -15,7 +15,7 @@ class SerialIO:
 
         self.serial1 = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
         rospy.init_node("Serial", anonymous=False)
-        # Serial이라는 이름의 노드 생성
+        # Serial이라는 이름의 노드 생
         rospy.Subscriber("/controller", Control_Info, self.controlCallback)
         # Subscriber 객체 만들기. /controller라는 메시지를 구독, 메시지 타입:msg, callback함수 이름: controlCallback
         # 메시지 받을 때마다 콜백함수 돌아감. -> 콜백함수에서 받아온 메시지 안에 들어있는 속도, 조향, 기어값 등등 넣어주면 됨
