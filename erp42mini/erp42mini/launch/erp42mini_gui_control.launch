@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="erp42_mini_gui" pkg="erp42mini" type="erp_control_ui.py" output="screen">
+        <param name="/port" value="/dev/ttyUSB1" type="string"/>
+    </node>
+</launch>
